@@ -1,0 +1,294 @@
+{
+ "schema_version": "3.0",
+ "composition": "丙 (C × ZC)",
+ "odds_dependency": "なし（前日に完結する）",
+ "race_id": "202606040905",
+ "date": "2026-09-27",
+ "racecourse": null,
+ "race_num": null,
+ "race_name": null,
+ "distance": null,
+ "surface": null,
+ "post_time": null,
+ "num_horses": 10,
+ "marks": [
+  {
+   "mark": "◎",
+   "horse_num": 10,
+   "horse_name": null,
+   "p_ability": 0.11035,
+   "odds": null,
+   "popularity": null
+  },
+  {
+   "mark": "○",
+   "horse_num": 9,
+   "horse_name": null,
+   "p_ability": 0.10557,
+   "odds": null,
+   "popularity": null
+  },
+  {
+   "mark": "▲",
+   "horse_num": 7,
+   "horse_name": null,
+   "p_ability": 0.10234,
+   "odds": null,
+   "popularity": null
+  },
+  {
+   "mark": "△",
+   "horse_num": 8,
+   "horse_name": null,
+   "p_ability": 0.10234,
+   "odds": null,
+   "popularity": null
+  }
+ ],
+ "honmei_differs_from_favorite": null,
+ "is_prime_race": false,
+ "zc_score": 0.54742,
+ "bets": [
+  {
+   "key": "sanrenpuku_1",
+   "label": "三連複 ◎○▲ 1点",
+   "bet_type": "sanrenpuku",
+   "points": 1,
+   "cost_yen": 100,
+   "horses": [
+    10,
+    9,
+    7
+   ],
+   "combinations": [
+    [
+     10,
+     9,
+     7
+    ]
+   ],
+   "hit_rate": 0.0706,
+   "return_rate": 0.9044,
+   "return_ci95": [
+    0.701,
+    1.1487
+   ],
+   "reach": 0.617,
+   "undecided": true,
+   "basis_n": 3046,
+   "scope": "全レース"
+  },
+  {
+   "key": "wide_box3",
+   "label": "ワイド ◎○▲BOX",
+   "bet_type": "wide",
+   "points": 3,
+   "cost_yen": 300,
+   "horses": [
+    10,
+    9,
+    7
+   ],
+   "combinations": [
+    [
+     10,
+     9
+    ],
+    [
+     10,
+     7
+    ],
+    [
+     9,
+     7
+    ]
+   ],
+   "hit_rate": 0.4879,
+   "return_rate": 0.8127,
+   "return_ci95": [
+    0.7634,
+    0.8646
+   ],
+   "reach": 0.168,
+   "undecided": false,
+   "basis_n": 3046,
+   "scope": "全レース"
+  },
+  {
+   "key": "wide_box5",
+   "label": "ワイド 上位5頭BOX",
+   "bet_type": "wide",
+   "points": 10,
+   "cost_yen": 1000,
+   "horses": [
+    10,
+    9,
+    7,
+    8,
+    2
+   ],
+   "combinations": [
+    [
+     10,
+     9
+    ],
+    [
+     10,
+     7
+    ],
+    [
+     10,
+     8
+    ],
+    [
+     10,
+     2
+    ],
+    [
+     9,
+     7
+    ],
+    [
+     9,
+     8
+    ],
+    [
+     9,
+     2
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     7,
+     2
+    ],
+    [
+     8,
+     2
+    ]
+   ],
+   "hit_rate": 0.7745,
+   "return_rate": 0.7611,
+   "return_ci95": [
+    0.7275,
+    0.7959
+   ],
+   "reach": -0.062,
+   "undecided": false,
+   "basis_n": 3045,
+   "scope": "全レース"
+  },
+  {
+   "key": "wide_box6",
+   "label": "ワイド 上位6頭BOX",
+   "bet_type": "wide",
+   "points": 15,
+   "cost_yen": 1500,
+   "horses": [
+    10,
+    9,
+    7,
+    8,
+    2,
+    1
+   ],
+   "combinations": [
+    [
+     10,
+     9
+    ],
+    [
+     10,
+     7
+    ],
+    [
+     10,
+     8
+    ],
+    [
+     10,
+     2
+    ],
+    [
+     10,
+     1
+    ],
+    [
+     9,
+     7
+    ],
+    [
+     9,
+     8
+    ],
+    [
+     9,
+     2
+    ],
+    [
+     9,
+     1
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     7,
+     2
+    ],
+    [
+     7,
+     1
+    ],
+    [
+     8,
+     2
+    ],
+    [
+     8,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "hit_rate": 0.8598,
+   "return_rate": 0.7691,
+   "return_ci95": [
+    0.7362,
+    0.8021
+   ],
+   "reach": -0.026,
+   "undecided": false,
+   "basis_n": 3035,
+   "scope": "全レース"
+  }
+ ],
+ "bets_note": "回収率はいずれも 100% を下回ります。買い続ければ長期的には損失が出ます。到達度は「控除率がつくった 100% までの溝を何 % 埋めているか」で、100% で回収率 100% に届きます。点数を増やすほど下がります。",
+ "bets_undecided_note": "三連複 ◎○▲ 1点 は的中数が少なく、回収率は判定不能です（95%信頼区間が 100% をまたぎます）。",
+ "predicted": {
+  "honmei_fukusho_rate": 0.6005,
+  "any_of_3_marks_top3_rate": 0.9038,
+  "ci95": [
+   0.8936,
+   0.9143
+  ],
+  "scope": "全レース",
+  "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+ },
+ "model_version": "2026-09-26T03:46:09",
+ "generated_at": "2026-09-26T17:45:58+09:00",
+ "disclaimer": [
+  "本サイトは的中率を最大化する設計であり、収益を保証するものではありません。",
+  "過去データでの実測回収率は約86%です。長期的には投資額を下回ります。",
+  "推奨馬券は出しません。掲載しているのは「この印を買った場合の過去実測」です。",
+  "掲示している的中率は2024年（3,046レース）の実測であり、将来の成績を保証しません。",
+  "馬券の購入は自己責任で行ってください。20歳未満の方は購入できません。",
+  "印はオッズ・人気を一切使わずに決めています。表示しているオッズは参考情報です。"
+ ],
+ "note": "印はオッズ・人気を一切使わずに決定している。表示しているオッズ・人気は参考情報であり、決定には使っていない。"
+}

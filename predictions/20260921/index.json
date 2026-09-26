@@ -1,0 +1,3356 @@
+{
+ "schema_version": "3.0",
+ "date": "2026-09-21",
+ "composition": "丙 (C × ZC)",
+ "odds_dependency": "なし（前日に完結する）",
+ "n_races": 12,
+ "n_prime_races": 2,
+ "races": [
+  {
+   "race_id": "202609040701",
+   "racecourse": "阪神",
+   "race_num": 1,
+   "race_name": "サラ系2歳未勝利",
+   "post_time": null,
+   "surface": "ダート",
+   "distance": 1800,
+   "num_horses": 8,
+   "is_prime_race": true,
+   "zc_score": 0.99376,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 3,
+     "horse_name": "ポカポカヨウキ",
+     "p_ability": 0.33374,
+     "odds": 2.0,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 8,
+     "horse_name": "エコロラーダ",
+     "p_ability": 0.1787,
+     "odds": 2.4,
+     "popularity": 2.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 1,
+     "horse_name": "ハイネスプラウド",
+     "p_ability": 0.14684,
+     "odds": 17.0,
+     "popularity": 6.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 6,
+     "horse_name": "ランズエンド",
+     "p_ability": 0.10183,
+     "odds": 8.9,
+     "popularity": 3.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.7508,
+    "any_of_3_marks_top3_rate": 0.9683,
+    "ci95": [
+     0.954,
+     0.981
+    ],
+    "scope": "勝負レース（ZCスコア上位20%）",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      3,
+      8,
+      1
+     ],
+     "combinations": [
+      [
+       3,
+       8,
+       1
+      ]
+     ],
+     "hit_rate": 0.1691,
+     "return_rate": 0.9048,
+     "return_ci95": [
+      0.7072,
+      1.1205
+     ],
+     "reach": 0.619,
+     "undecided": true,
+     "basis_n": 609,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      3,
+      8,
+      1
+     ],
+     "combinations": [
+      [
+       3,
+       8
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "hit_rate": 0.7061,
+     "return_rate": 0.8475,
+     "return_ci95": [
+      0.7731,
+      0.9193
+     ],
+     "reach": 0.322,
+     "undecided": false,
+     "basis_n": 609,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      3,
+      8,
+      1,
+      6,
+      5
+     ],
+     "combinations": [
+      [
+       3,
+       8
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       6,
+       5
+      ]
+     ],
+     "hit_rate": 0.9441,
+     "return_rate": 0.8104,
+     "return_ci95": [
+      0.7401,
+      0.8826
+     ],
+     "reach": 0.157,
+     "undecided": false,
+     "basis_n": 608,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      3,
+      8,
+      1,
+      6,
+      5,
+      7
+     ],
+     "combinations": [
+      [
+       3,
+       8
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       8,
+       7
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       6,
+       5
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       5,
+       7
+      ]
+     ],
+     "hit_rate": 0.9754,
+     "return_rate": 0.7651,
+     "return_ci95": [
+      0.704,
+      0.8329
+     ],
+     "reach": -0.044,
+     "undecided": false,
+     "basis_n": 598,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    }
+   ],
+   "honmei": 3,
+   "honmei_differs_from_favorite": false
+  },
+  {
+   "race_id": "202609040702",
+   "racecourse": "阪神",
+   "race_num": 2,
+   "race_name": "サラ系2歳未勝利",
+   "post_time": null,
+   "surface": "芝",
+   "distance": 1600,
+   "num_horses": 10,
+   "is_prime_race": true,
+   "zc_score": 0.98882,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 5,
+     "horse_name": "リアンフィニ",
+     "p_ability": 0.21449,
+     "odds": 2.8,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 9,
+     "horse_name": "ラガッタレアーレ",
+     "p_ability": 0.19838,
+     "odds": 4.8,
+     "popularity": 3.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 7,
+     "horse_name": "イテルム",
+     "p_ability": 0.18348,
+     "odds": 11.6,
+     "popularity": 6.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 3,
+     "horse_name": "ハマナスノサクコロ",
+     "p_ability": 0.14887,
+     "odds": 6.2,
+     "popularity": 4.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.7508,
+    "any_of_3_marks_top3_rate": 0.9683,
+    "ci95": [
+     0.954,
+     0.981
+    ],
+    "scope": "勝負レース（ZCスコア上位20%）",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      5,
+      9,
+      7
+     ],
+     "combinations": [
+      [
+       5,
+       9,
+       7
+      ]
+     ],
+     "hit_rate": 0.1691,
+     "return_rate": 0.9048,
+     "return_ci95": [
+      0.7072,
+      1.1205
+     ],
+     "reach": 0.619,
+     "undecided": true,
+     "basis_n": 609,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      5,
+      9,
+      7
+     ],
+     "combinations": [
+      [
+       5,
+       9
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       9,
+       7
+      ]
+     ],
+     "hit_rate": 0.7061,
+     "return_rate": 0.8475,
+     "return_ci95": [
+      0.7731,
+      0.9193
+     ],
+     "reach": 0.322,
+     "undecided": false,
+     "basis_n": 609,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      5,
+      9,
+      7,
+      3,
+      1
+     ],
+     "combinations": [
+      [
+       5,
+       9
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       9,
+       3
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "hit_rate": 0.9441,
+     "return_rate": 0.8104,
+     "return_ci95": [
+      0.7401,
+      0.8826
+     ],
+     "reach": 0.157,
+     "undecided": false,
+     "basis_n": 608,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      5,
+      9,
+      7,
+      3,
+      1,
+      8
+     ],
+     "combinations": [
+      [
+       5,
+       9
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       5,
+       8
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       9,
+       3
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       9,
+       8
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       1,
+       8
+      ]
+     ],
+     "hit_rate": 0.9754,
+     "return_rate": 0.7651,
+     "return_ci95": [
+      0.704,
+      0.8329
+     ],
+     "reach": -0.044,
+     "undecided": false,
+     "basis_n": 598,
+     "scope": "勝負レース（ZCスコア上位20%）"
+    }
+   ],
+   "honmei": 5,
+   "honmei_differs_from_favorite": false
+  },
+  {
+   "race_id": "202609040703",
+   "racecourse": "阪神",
+   "race_num": 3,
+   "race_name": "サラ系2歳未勝利",
+   "post_time": null,
+   "surface": "芝",
+   "distance": 1200,
+   "num_horses": 13,
+   "is_prime_race": false,
+   "zc_score": 0.96274,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 9,
+     "horse_name": "カツダルマ",
+     "p_ability": 0.21123,
+     "odds": 1.7,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 3,
+     "horse_name": "コジアン",
+     "p_ability": 0.16238,
+     "odds": 8.4,
+     "popularity": 4.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 4,
+     "horse_name": "エルダークローネ",
+     "p_ability": 0.15269,
+     "odds": 7.1,
+     "popularity": 3.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 6,
+     "horse_name": "ノヴァーリス",
+     "p_ability": 0.12097,
+     "odds": 6.2,
+     "popularity": 2.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      9,
+      3,
+      4
+     ],
+     "combinations": [
+      [
+       9,
+       3,
+       4
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      9,
+      3,
+      4
+     ],
+     "combinations": [
+      [
+       9,
+       3
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       3,
+       4
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      9,
+      3,
+      4,
+      6,
+      13
+     ],
+     "combinations": [
+      [
+       9,
+       3
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9,
+       6
+      ],
+      [
+       9,
+       13
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       4,
+       13
+      ],
+      [
+       6,
+       13
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      9,
+      3,
+      4,
+      6,
+      13,
+      12
+     ],
+     "combinations": [
+      [
+       9,
+       3
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9,
+       6
+      ],
+      [
+       9,
+       13
+      ],
+      [
+       9,
+       12
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       3,
+       12
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       4,
+       13
+      ],
+      [
+       4,
+       12
+      ],
+      [
+       6,
+       13
+      ],
+      [
+       6,
+       12
+      ],
+      [
+       13,
+       12
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 9,
+   "honmei_differs_from_favorite": false
+  },
+  {
+   "race_id": "202609040704",
+   "racecourse": "阪神",
+   "race_num": 4,
+   "race_name": "サラ系2歳新馬",
+   "post_time": null,
+   "surface": "ダート",
+   "distance": 1400,
+   "num_horses": 15,
+   "is_prime_race": false,
+   "zc_score": 0.40178,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 1,
+     "horse_name": "エイントノーウェイ",
+     "p_ability": 0.07621,
+     "odds": 3.8,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 4,
+     "horse_name": "ジェルメーヌ",
+     "p_ability": 0.06961,
+     "odds": 33.9,
+     "popularity": 8.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 5,
+     "horse_name": "レジェンディーヴァ",
+     "p_ability": 0.06961,
+     "odds": 44.3,
+     "popularity": 11.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 2,
+     "horse_name": "ワインオクロック",
+     "p_ability": 0.06879,
+     "odds": 60.4,
+     "popularity": 12.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      1,
+      4,
+      5
+     ],
+     "combinations": [
+      [
+       1,
+       4,
+       5
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      1,
+      4,
+      5
+     ],
+     "combinations": [
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       4,
+       5
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      1,
+      4,
+      5,
+      2,
+      3
+     ],
+     "combinations": [
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      1,
+      4,
+      5,
+      2,
+      3,
+      6
+     ],
+     "combinations": [
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       3,
+       6
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 1,
+   "honmei_differs_from_favorite": null
+  },
+  {
+   "race_id": "202609040705",
+   "racecourse": "阪神",
+   "race_num": 5,
+   "race_name": "サラ系2歳新馬",
+   "post_time": null,
+   "surface": "芝",
+   "distance": 1800,
+   "num_horses": 10,
+   "is_prime_race": false,
+   "zc_score": 0.57202,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 2,
+     "horse_name": "シンゼンジュウベエ",
+     "p_ability": 0.11111,
+     "odds": 123.0,
+     "popularity": 10.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 9,
+     "horse_name": "キミアドーネ",
+     "p_ability": 0.10932,
+     "odds": 21.3,
+     "popularity": 5.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 1,
+     "horse_name": "ルジェドリール",
+     "p_ability": 0.10761,
+     "odds": 86.8,
+     "popularity": 8.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 7,
+     "horse_name": "キングリア",
+     "p_ability": 0.10145,
+     "odds": 2.6,
+     "popularity": 2.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      2,
+      9,
+      1
+     ],
+     "combinations": [
+      [
+       2,
+       9,
+       1
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      2,
+      9,
+      1
+     ],
+     "combinations": [
+      [
+       2,
+       9
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       9,
+       1
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      2,
+      9,
+      1,
+      7,
+      4
+     ],
+     "combinations": [
+      [
+       2,
+       9
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       7,
+       4
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      2,
+      9,
+      1,
+      7,
+      4,
+      3
+     ],
+     "combinations": [
+      [
+       2,
+       9
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9,
+       3
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 2,
+   "honmei_differs_from_favorite": true
+  },
+  {
+   "race_id": "202609040706",
+   "racecourse": "阪神",
+   "race_num": 6,
+   "race_name": "サラ系3歳上500万円以下",
+   "post_time": null,
+   "surface": "ダート",
+   "distance": 2000,
+   "num_horses": 15,
+   "is_prime_race": false,
+   "zc_score": 0.83778,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 11,
+     "horse_name": "メイショウジンライ",
+     "p_ability": 0.13862,
+     "odds": 2.8,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 3,
+     "horse_name": "ドメイン",
+     "p_ability": 0.09507,
+     "odds": 23.4,
+     "popularity": 11.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 6,
+     "horse_name": "エイユーファイヤー",
+     "p_ability": 0.09014,
+     "odds": 4.4,
+     "popularity": 2.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 8,
+     "horse_name": "ルシタニア",
+     "p_ability": 0.08985,
+     "odds": 13.3,
+     "popularity": 6.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      11,
+      3,
+      6
+     ],
+     "combinations": [
+      [
+       11,
+       3,
+       6
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      11,
+      3,
+      6
+     ],
+     "combinations": [
+      [
+       11,
+       3
+      ],
+      [
+       11,
+       6
+      ],
+      [
+       3,
+       6
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      11,
+      3,
+      6,
+      8,
+      10
+     ],
+     "combinations": [
+      [
+       11,
+       3
+      ],
+      [
+       11,
+       6
+      ],
+      [
+       11,
+       8
+      ],
+      [
+       11,
+       10
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       3,
+       10
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       8,
+       10
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      11,
+      3,
+      6,
+      8,
+      10,
+      13
+     ],
+     "combinations": [
+      [
+       11,
+       3
+      ],
+      [
+       11,
+       6
+      ],
+      [
+       11,
+       8
+      ],
+      [
+       11,
+       10
+      ],
+      [
+       11,
+       13
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       3,
+       10
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       6,
+       13
+      ],
+      [
+       8,
+       10
+      ],
+      [
+       8,
+       13
+      ],
+      [
+       10,
+       13
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 11,
+   "honmei_differs_from_favorite": false
+  },
+  {
+   "race_id": "202609040707",
+   "racecourse": "阪神",
+   "race_num": 7,
+   "race_name": "サラ系3歳上500万円以下",
+   "post_time": null,
+   "surface": "芝",
+   "distance": 1400,
+   "num_horses": 18,
+   "is_prime_race": false,
+   "zc_score": 0.92095,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 6,
+     "horse_name": "ヴァージル",
+     "p_ability": 0.12862,
+     "odds": 9.8,
+     "popularity": 4.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 17,
+     "horse_name": "メイクワンズデイ",
+     "p_ability": 0.12482,
+     "odds": 11.9,
+     "popularity": 6.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 10,
+     "horse_name": "ペールノエル",
+     "p_ability": 0.10807,
+     "odds": 11.7,
+     "popularity": 5.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 2,
+     "horse_name": "ダンデノン",
+     "p_ability": 0.10734,
+     "odds": 3.3,
+     "popularity": 2.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      6,
+      17,
+      10
+     ],
+     "combinations": [
+      [
+       6,
+       17,
+       10
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      6,
+      17,
+      10
+     ],
+     "combinations": [
+      [
+       6,
+       17
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       17,
+       10
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      6,
+      17,
+      10,
+      2,
+      11
+     ],
+     "combinations": [
+      [
+       6,
+       17
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       6,
+       11
+      ],
+      [
+       17,
+       10
+      ],
+      [
+       17,
+       2
+      ],
+      [
+       17,
+       11
+      ],
+      [
+       10,
+       2
+      ],
+      [
+       10,
+       11
+      ],
+      [
+       2,
+       11
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      6,
+      17,
+      10,
+      2,
+      11,
+      12
+     ],
+     "combinations": [
+      [
+       6,
+       17
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       6,
+       11
+      ],
+      [
+       6,
+       12
+      ],
+      [
+       17,
+       10
+      ],
+      [
+       17,
+       2
+      ],
+      [
+       17,
+       11
+      ],
+      [
+       17,
+       12
+      ],
+      [
+       10,
+       2
+      ],
+      [
+       10,
+       11
+      ],
+      [
+       10,
+       12
+      ],
+      [
+       2,
+       11
+      ],
+      [
+       2,
+       12
+      ],
+      [
+       11,
+       12
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 6,
+   "honmei_differs_from_favorite": true
+  },
+  {
+   "race_id": "202609040708",
+   "racecourse": "阪神",
+   "race_num": 8,
+   "race_name": "サラ系3歳上500万円以下",
+   "post_time": null,
+   "surface": "ダート",
+   "distance": 1800,
+   "num_horses": 12,
+   "is_prime_race": false,
+   "zc_score": 0.94722,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 3,
+     "horse_name": "ロードアルディート",
+     "p_ability": 0.16908,
+     "odds": 2.7,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 7,
+     "horse_name": "レッドフレーザー",
+     "p_ability": 0.16677,
+     "odds": 3.6,
+     "popularity": 2.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 6,
+     "horse_name": "ディニテ",
+     "p_ability": 0.10316,
+     "odds": 7.1,
+     "popularity": 4.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 10,
+     "horse_name": "エアフォースワン",
+     "p_ability": 0.0965,
+     "odds": 23.0,
+     "popularity": 8.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      3,
+      7,
+      6
+     ],
+     "combinations": [
+      [
+       3,
+       7,
+       6
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      3,
+      7,
+      6
+     ],
+     "combinations": [
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       7,
+       6
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      3,
+      7,
+      6,
+      10,
+      11
+     ],
+     "combinations": [
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       10
+      ],
+      [
+       3,
+       11
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       7,
+       10
+      ],
+      [
+       7,
+       11
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       6,
+       11
+      ],
+      [
+       10,
+       11
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      3,
+      7,
+      6,
+      10,
+      11,
+      8
+     ],
+     "combinations": [
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       10
+      ],
+      [
+       3,
+       11
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       7,
+       10
+      ],
+      [
+       7,
+       11
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       6,
+       10
+      ],
+      [
+       6,
+       11
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       10,
+       11
+      ],
+      [
+       10,
+       8
+      ],
+      [
+       11,
+       8
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 3,
+   "honmei_differs_from_favorite": false
+  },
+  {
+   "race_id": "202609040709",
+   "racecourse": "阪神",
+   "race_num": 9,
+   "race_name": "新涼特別",
+   "post_time": null,
+   "surface": "ダート",
+   "distance": 1400,
+   "num_horses": 16,
+   "is_prime_race": false,
+   "zc_score": 0.81701,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 12,
+     "horse_name": "ピカラ",
+     "p_ability": 0.11565,
+     "odds": 2.8,
+     "popularity": 1.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 3,
+     "horse_name": "ポートデラメール",
+     "p_ability": 0.1144,
+     "odds": 3.8,
+     "popularity": 2.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 13,
+     "horse_name": "アンビシャスヨシノ",
+     "p_ability": 0.09102,
+     "odds": 17.3,
+     "popularity": 8.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 2,
+     "horse_name": "モズタチアガレ",
+     "p_ability": 0.09061,
+     "odds": 16.6,
+     "popularity": 7.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      12,
+      3,
+      13
+     ],
+     "combinations": [
+      [
+       12,
+       3,
+       13
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      12,
+      3,
+      13
+     ],
+     "combinations": [
+      [
+       12,
+       3
+      ],
+      [
+       12,
+       13
+      ],
+      [
+       3,
+       13
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      12,
+      3,
+      13,
+      2,
+      6
+     ],
+     "combinations": [
+      [
+       12,
+       3
+      ],
+      [
+       12,
+       13
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       12,
+       6
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       13,
+       6
+      ],
+      [
+       2,
+       6
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      12,
+      3,
+      13,
+      2,
+      6,
+      11
+     ],
+     "combinations": [
+      [
+       12,
+       3
+      ],
+      [
+       12,
+       13
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       12,
+       6
+      ],
+      [
+       12,
+       11
+      ],
+      [
+       3,
+       13
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       3,
+       11
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       13,
+       6
+      ],
+      [
+       13,
+       11
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       2,
+       11
+      ],
+      [
+       6,
+       11
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 12,
+   "honmei_differs_from_favorite": false
+  },
+  {
+   "race_id": "202609040710",
+   "racecourse": "阪神",
+   "race_num": 10,
+   "race_name": "2016メモリアル キタサンブラックカップ",
+   "post_time": null,
+   "surface": "芝",
+   "distance": 2200,
+   "num_horses": 16,
+   "is_prime_race": false,
+   "zc_score": 0.86494,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 8,
+     "horse_name": "アルマデオロ",
+     "p_ability": 0.14639,
+     "odds": 4.5,
+     "popularity": 2.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 16,
+     "horse_name": "ロードガレリア",
+     "p_ability": 0.08082,
+     "odds": 22.9,
+     "popularity": 10.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 10,
+     "horse_name": "ナリタエスペランサ",
+     "p_ability": 0.08049,
+     "odds": 3.9,
+     "popularity": 1.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 15,
+     "horse_name": "ベトルス",
+     "p_ability": 0.08021,
+     "odds": 6.9,
+     "popularity": 3.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      8,
+      16,
+      10
+     ],
+     "combinations": [
+      [
+       8,
+       16,
+       10
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      8,
+      16,
+      10
+     ],
+     "combinations": [
+      [
+       8,
+       16
+      ],
+      [
+       8,
+       10
+      ],
+      [
+       16,
+       10
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      8,
+      16,
+      10,
+      15,
+      3
+     ],
+     "combinations": [
+      [
+       8,
+       16
+      ],
+      [
+       8,
+       10
+      ],
+      [
+       8,
+       15
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       16,
+       10
+      ],
+      [
+       16,
+       15
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       10,
+       15
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       15,
+       3
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      8,
+      16,
+      10,
+      15,
+      3,
+      11
+     ],
+     "combinations": [
+      [
+       8,
+       16
+      ],
+      [
+       8,
+       10
+      ],
+      [
+       8,
+       15
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       8,
+       11
+      ],
+      [
+       16,
+       10
+      ],
+      [
+       16,
+       15
+      ],
+      [
+       16,
+       3
+      ],
+      [
+       16,
+       11
+      ],
+      [
+       10,
+       15
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       10,
+       11
+      ],
+      [
+       15,
+       3
+      ],
+      [
+       15,
+       11
+      ],
+      [
+       3,
+       11
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 8,
+   "honmei_differs_from_favorite": true
+  },
+  {
+   "race_id": "202609040711",
+   "racecourse": "阪神",
+   "race_num": 11,
+   "race_name": "神戸新聞杯",
+   "post_time": null,
+   "surface": "芝",
+   "distance": 2400,
+   "num_horses": 11,
+   "is_prime_race": false,
+   "zc_score": 0.93551,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 10,
+     "horse_name": "カフジエメンタール",
+     "p_ability": 0.15755,
+     "odds": 42.4,
+     "popularity": 9.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 1,
+     "horse_name": "ロブチェン",
+     "p_ability": 0.15079,
+     "odds": 1.4,
+     "popularity": 1.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 7,
+     "horse_name": "コンジェスタス",
+     "p_ability": 0.12681,
+     "odds": 11.0,
+     "popularity": 4.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 3,
+     "horse_name": "ゴーラッキー",
+     "p_ability": 0.10715,
+     "odds": 12.3,
+     "popularity": 5.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      10,
+      1,
+      7
+     ],
+     "combinations": [
+      [
+       10,
+       1,
+       7
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      10,
+      1,
+      7
+     ],
+     "combinations": [
+      [
+       10,
+       1
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      10,
+      1,
+      7,
+      3,
+      5
+     ],
+     "combinations": [
+      [
+       10,
+       1
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       10,
+       5
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       3,
+       5
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      10,
+      1,
+      7,
+      3,
+      5,
+      2
+     ],
+     "combinations": [
+      [
+       10,
+       1
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       10,
+       3
+      ],
+      [
+       10,
+       5
+      ],
+      [
+       10,
+       2
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       5,
+       2
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 10,
+   "honmei_differs_from_favorite": true
+  },
+  {
+   "race_id": "202609040712",
+   "racecourse": "阪神",
+   "race_num": 12,
+   "race_name": "サラ系3歳上500万円以下",
+   "post_time": null,
+   "surface": "ダート",
+   "distance": 1400,
+   "num_horses": 15,
+   "is_prime_race": false,
+   "zc_score": 0.9269,
+   "marks": [
+    {
+     "mark": "◎",
+     "horse_num": 10,
+     "horse_name": "リン",
+     "p_ability": 0.15828,
+     "odds": 5.9,
+     "popularity": 3.0
+    },
+    {
+     "mark": "○",
+     "horse_num": 9,
+     "horse_name": "エイシンティザー",
+     "p_ability": 0.14466,
+     "odds": 2.4,
+     "popularity": 1.0
+    },
+    {
+     "mark": "▲",
+     "horse_num": 7,
+     "horse_name": "ディーエストッキー",
+     "p_ability": 0.11709,
+     "odds": 21.7,
+     "popularity": 7.0
+    },
+    {
+     "mark": "△",
+     "horse_num": 5,
+     "horse_name": "ホットシート",
+     "p_ability": 0.10395,
+     "odds": 4.1,
+     "popularity": 2.0
+    }
+   ],
+   "predicted": {
+    "honmei_fukusho_rate": 0.6005,
+    "any_of_3_marks_top3_rate": 0.9038,
+    "ci95": [
+     0.8936,
+     0.9143
+    ],
+    "scope": "全レース",
+    "basis": "TUNE 2024（3,046レース）実測。**本番成果物のみ**を使用: models/site/m_ability.txt + zc.json。勝負レースの判定は zc.json の threshold_top20（本番と同一）。『2頭以上』は実着順から直接カウント（Harville 不使用）"
+   },
+   "bets": [
+    {
+     "key": "sanrenpuku_1",
+     "label": "三連複 ◎○▲ 1点",
+     "bet_type": "sanrenpuku",
+     "points": 1,
+     "cost_yen": 100,
+     "horses": [
+      10,
+      9,
+      7
+     ],
+     "combinations": [
+      [
+       10,
+       9,
+       7
+      ]
+     ],
+     "hit_rate": 0.0706,
+     "return_rate": 0.9044,
+     "return_ci95": [
+      0.701,
+      1.1487
+     ],
+     "reach": 0.617,
+     "undecided": true,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box3",
+     "label": "ワイド ◎○▲BOX",
+     "bet_type": "wide",
+     "points": 3,
+     "cost_yen": 300,
+     "horses": [
+      10,
+      9,
+      7
+     ],
+     "combinations": [
+      [
+       10,
+       9
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       9,
+       7
+      ]
+     ],
+     "hit_rate": 0.4879,
+     "return_rate": 0.8127,
+     "return_ci95": [
+      0.7634,
+      0.8646
+     ],
+     "reach": 0.168,
+     "undecided": false,
+     "basis_n": 3046,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box5",
+     "label": "ワイド 上位5頭BOX",
+     "bet_type": "wide",
+     "points": 10,
+     "cost_yen": 1000,
+     "horses": [
+      10,
+      9,
+      7,
+      5,
+      4
+     ],
+     "combinations": [
+      [
+       10,
+       9
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       10,
+       5
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       9,
+       5
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       5,
+       4
+      ]
+     ],
+     "hit_rate": 0.7745,
+     "return_rate": 0.7611,
+     "return_ci95": [
+      0.7275,
+      0.7959
+     ],
+     "reach": -0.062,
+     "undecided": false,
+     "basis_n": 3045,
+     "scope": "全レース"
+    },
+    {
+     "key": "wide_box6",
+     "label": "ワイド 上位6頭BOX",
+     "bet_type": "wide",
+     "points": 15,
+     "cost_yen": 1500,
+     "horses": [
+      10,
+      9,
+      7,
+      5,
+      4,
+      11
+     ],
+     "combinations": [
+      [
+       10,
+       9
+      ],
+      [
+       10,
+       7
+      ],
+      [
+       10,
+       5
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       10,
+       11
+      ],
+      [
+       9,
+       7
+      ],
+      [
+       9,
+       5
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9,
+       11
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       7,
+       11
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       5,
+       11
+      ],
+      [
+       4,
+       11
+      ]
+     ],
+     "hit_rate": 0.8598,
+     "return_rate": 0.7691,
+     "return_ci95": [
+      0.7362,
+      0.8021
+     ],
+     "reach": -0.026,
+     "undecided": false,
+     "basis_n": 3035,
+     "scope": "全レース"
+    }
+   ],
+   "honmei": 10,
+   "honmei_differs_from_favorite": true
+  }
+ ],
+ "disclaimer": [
+  "本サイトは的中率を最大化する設計であり、収益を保証するものではありません。",
+  "過去データでの実測回収率は約86%です。長期的には投資額を下回ります。",
+  "推奨馬券は出しません。掲載しているのは「この印を買った場合の過去実測」です。",
+  "掲示している的中率は2024年（3,046レース）の実測であり、将来の成績を保証しません。",
+  "馬券の購入は自己責任で行ってください。20歳未満の方は購入できません。",
+  "印はオッズ・人気を一切使わずに決めています。表示しているオッズは参考情報です。"
+ ],
+ "model_version": "2026-09-26T03:46:09",
+ "generated_at": "2026-09-26T17:45:46+09:00"
+}

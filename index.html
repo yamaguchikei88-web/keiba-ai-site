@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07070a">
+<title>競馬予想</title>
+<style>
+ :root{
+   --bg:#07070a; --bg2:#0c0c11; --card:rgba(255,255,255,.028);
+   --line:rgba(212,183,106,.18); --line2:rgba(255,255,255,.07);
+   --gold:#d4b76a; --gold-l:#f0dda6; --gold-d:#8c7534;
+   --ink:#eceae5; --sub:#8e8a82;
+   --m1:#e8736f; --m2:#6ba7e8; --m3:#63c88b; --m4:#b08ae0;
+   --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","MS PMincho",serif;
+   --didot:"Didot","Bodoni MT","Playfair Display",Georgia,"Times New Roman",serif;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden}
+ body{background:var(--bg);color:var(--ink);line-height:1.8;
+   font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN",
+   "Yu Gothic",Meiryo,sans-serif;-webkit-font-smoothing:antialiased;
+   font-feature-settings:"palt" 1;}
+ /* 背景 : ヒーロー画像 + 上下のビネット */
+ .bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+   background:
+     radial-gradient(900px 420px at 50% -8%, rgba(212,183,106,.09), transparent 62%),
+     var(--bg);}
+ /* 透かし : 「よく見ると馬だと分かる」程度まで落とす。
+    画像を別レイヤーにして opacity を直接効かせる（グラデーションの重ね順に
+    依存しないので、濃さの調整が確実にできる）。 */
+ .bg.img::after{content:"";position:absolute;inset:0;
+   background:url(assets/hero.jpg) 68% 26%/min(1180px,150%) auto no-repeat;
+   opacity:.052;filter:blur(.4px);}
+ .wrap{position:relative;z-index:1;max-width:820px;margin:0 auto;
+   padding:26px 16px 64px}
+ header{text-align:center;padding:14px 0 6px}
+ h1{font-family:var(--mincho);font-size:clamp(1.35rem,5.4vw,1.75rem);
+   letter-spacing:.42em;text-indent:.42em;margin:.1em 0;font-weight:400;
+   background:linear-gradient(180deg,#fff6dc 0%,var(--gold-l) 42%,var(--gold) 100%);
+   -webkit-background-clip:text;background-clip:text;color:transparent;}
+ .rule{width:64px;height:1px;margin:14px auto 8px;
+   background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.8}
+ .dow{color:var(--sub);font-size:.78rem;letter-spacing:.22em;
+   font-family:var(--didot)}
+ /* セクション : 箱を減らし、ヘアラインで区切る */
+ .sec{margin:26px 0 0}
+ .sec>.lbl{font-family:var(--mincho);font-size:.72rem;letter-spacing:.34em;
+   color:var(--gold);opacity:.85;margin:0 0 10px;text-indent:.34em}
+ .panel{background:var(--card);border:1px solid var(--line2);border-radius:2px;
+   padding:14px 16px;backdrop-filter:blur(6px)}
+ /* 日付 */
+ .dateRow{display:flex;gap:8px;align-items:stretch;min-width:0}
+ input[type=date]{flex:1 1 auto;min-width:0;width:100%;max-width:100%;
+   background:transparent;color:var(--ink);border:1px solid var(--line);
+   border-radius:2px;padding:10px 10px;font-size:.98rem;font-weight:500;
+   color-scheme:dark;font-family:var(--didot);letter-spacing:.06em}
+ .arrow{flex:0 0 42px;background:transparent;border:1px solid var(--line2);
+   border-radius:2px;color:var(--sub);font-size:1rem;cursor:pointer;
+   transition:.18s}
+ .arrow:hover:not(:disabled){color:var(--gold-l);border-color:var(--gold)}
+ .arrow:disabled{opacity:.25;cursor:default}
+ /* 実測成績 : 小さく 2 行 */
+ .stats{display:flex;flex-wrap:wrap;gap:0 22px;font-size:.74rem;color:var(--sub);
+   letter-spacing:.02em}
+ .stat{display:flex;align-items:baseline;gap:6px;padding:2px 0}
+ .stat b{font-family:var(--didot);font-size:1.02rem;color:var(--gold-l);
+   font-weight:500;letter-spacing:.02em}
+ .stat i{font-style:normal;opacity:.6;font-size:.68rem}
+ /* タブ : 下線式 */
+ .tabs{display:flex;gap:28px;border-bottom:1px solid var(--line2);margin:30px 0 0}
+ .tab{padding:10px 2px 11px;cursor:pointer;color:var(--sub);font-size:.88rem;
+   letter-spacing:.14em;font-family:var(--mincho);position:relative;
+   transition:color .2s}
+ .tab:hover{color:var(--ink)}
+ .tab.on{color:var(--gold-l)}
+ .tab.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;
+   background:linear-gradient(90deg,var(--gold),var(--gold-d))}
+ .tab em{font-style:normal;font-family:var(--didot);opacity:.7;margin-left:5px;
+   font-size:.8rem}
+ /* 競馬場 : ボタンをやめてヘアラインのセグメントに */
+ .venues{display:flex;flex-wrap:wrap;gap:0 20px;margin-top:14px}
+ .v{padding:5px 0 6px;cursor:pointer;color:var(--sub);font-size:.84rem;
+   letter-spacing:.1em;border-bottom:1px solid transparent;transition:.18s;
+   background:none;border-top:0;border-left:0;border-right:0;font-family:inherit}
+ .v:hover{color:var(--ink)}
+ .v.on{color:var(--gold-l);border-bottom-color:var(--gold)}
+ .v em{font-style:normal;font-family:var(--didot);opacity:.55;margin-left:5px;
+   font-size:.74rem}
+ /* レース */
+ .race{border-top:1px solid var(--line2);padding:20px 2px 18px}
+ .race:first-of-type{border-top:0}
+ .race.prime{border-left:1px solid var(--gold);padding-left:14px;
+   background:linear-gradient(90deg,rgba(212,183,106,.05),transparent 42%)}
+ .rhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+ .rno{font-family:var(--didot);font-size:1.18rem;color:var(--gold-l);
+   letter-spacing:.02em;flex:none}
+ .rname{font-family:var(--mincho);font-size:1rem;letter-spacing:.06em;
+   word-break:break-word}
+ .badge{font-family:var(--mincho);font-size:.64rem;letter-spacing:.2em;
+   color:var(--gold);border:1px solid var(--line);border-radius:2px;
+   padding:1px 8px;white-space:nowrap}
+ .cond{color:var(--sub);font-size:.74rem;margin-top:4px;letter-spacing:.06em}
+ table{border-collapse:collapse;width:100%;margin-top:12px;font-size:.92rem;
+   table-layout:fixed}
+ td{padding:6px 3px;vertical-align:top;border:0}
+ .m{width:1.9em;text-align:center;font-weight:700;font-size:1.06rem}
+ .m1{color:var(--m1)} .m2{color:var(--m2)} .m3{color:var(--m3)} .m4{color:var(--m4)}
+ .num{width:2.3em;color:var(--sub);font-family:var(--didot);font-size:.95rem;
+   font-variant-numeric:tabular-nums}
+ .nm{word-break:break-word;overflow-wrap:anywhere;line-height:1.55;
+   letter-spacing:.02em}
+ .odds{width:4.4em;text-align:right;color:var(--sub);font-size:.8rem;
+   font-family:var(--didot);font-variant-numeric:tabular-nums}
+ /* 自信レース一覧 */
+ .pick{display:flex;align-items:center;gap:14px;padding:13px 2px;
+   border-top:1px solid var(--line2);cursor:pointer;transition:.18s}
+ .pick:first-child{border-top:0}
+ .pick:hover{background:rgba(212,183,106,.04)}
+ .pick .tm{font-family:var(--didot);color:var(--gold-l);font-size:.92rem;
+   width:3.4em;flex:none;font-variant-numeric:tabular-nums}
+ .pick .pl{font-size:.88rem;width:5.6em;flex:none;letter-spacing:.06em}
+ .pick .mm{color:var(--sub);font-size:.86rem;font-family:var(--didot)}
+ .pick .mk{font-weight:700;margin-right:1px}
+ .bets{margin-top:14px;border-top:1px solid var(--line2);padding-top:12px}
+ .bets .h{font-family:var(--mincho);font-size:.7rem;letter-spacing:.2em;
+   color:var(--gold);opacity:.85;margin-bottom:8px}
+ .bet{padding:9px 0;border-top:1px solid rgba(255,255,255,.05)}
+ .bet:first-of-type{border-top:0}
+ .bet .t{font-size:.86rem;letter-spacing:.04em}
+ .bet .t em{font-style:normal;color:var(--sub);font-family:var(--didot);
+   margin-left:6px;font-size:.8rem}
+ .bet .kv{display:flex;gap:18px;margin-top:3px;flex-wrap:wrap}
+ .bet .kv div{display:flex;align-items:baseline;gap:5px}
+ .bet .kv span{color:var(--sub);font-size:.72rem}
+ .bet .kv b{font-family:var(--didot);font-size:1.02rem;font-weight:500}
+ .bet .kv .hitv{color:var(--gold-l)}
+ .bet .kv .roiv{color:#e8a5a3}
+ .bet .kv .rch{color:var(--sub)}
+ .bet .kv .rchn{color:#e8a5a3;opacity:.8}
+ .bet .kv .ud{font-style:normal;font-size:.66rem;
+   letter-spacing:.08em;color:var(--sub);margin-left:5px;
+   border:1px solid var(--line2);border-radius:2px;padding:1px 4px}
+ .bet .cb{margin-top:6px;color:var(--sub);font-size:.74rem;
+   font-family:var(--didot);line-height:1.9;word-break:break-word}
+ .bets .warn{margin-top:9px;font-size:.72rem;color:#e8a5a3;opacity:.9}
+ .none{color:var(--sub);font-size:.86rem;padding:22px 2px;line-height:1.9}
+ .note{border:1px solid var(--line);border-radius:2px;padding:14px 16px;
+   margin:16px 0;font-size:.84rem;color:var(--gold-l);
+   background:rgba(212,183,106,.05)}
+ .note .s{display:block;color:var(--sub);font-size:.76rem;margin-top:6px}
+ .sample{border-color:rgba(232,115,111,.4);color:#e8a5a3;
+   background:rgba(232,115,111,.06)}
+ .disc{border-top:1px solid var(--line2);margin-top:40px;padding-top:18px;
+   font-size:.74rem;color:var(--sub);line-height:1.85}
+ .disc b{display:block;color:var(--gold);font-family:var(--mincho);
+   letter-spacing:.24em;margin-bottom:8px;font-size:.72rem;font-weight:400}
+ .disc ul{padding-left:1.1em;margin:0}
+ .disc li{margin:.45em 0}
+ @media(max-width:420px){
+   .wrap{padding:20px 13px 56px}
+   .tabs{gap:20px}
+   .venues{gap:0 15px}
+   .pick{gap:9px}
+   .pick .pl{width:5em;font-size:.83rem}
+ }
+</style></head><body>
+<div class="bg" id="bg"></div>
+<div class="wrap">
+<header><h1>競馬予想</h1><div class="rule"></div>
+<div class="dow" id="dow"></div></header>
+
+<div class="sec" id="dateSec"><div class="lbl">開催日</div>
+  <div class="dateRow"><button class="arrow" id="prev" aria-label="前の開催">&#8249;</button><input type="date" id="dp"><button class="arrow" id="next" aria-label="次の開催">&#8250;</button></div></div>
+
+<div class="sec" id="statsSec"><div class="lbl">実測成績</div>
+  <div class="stats" id="stats"></div></div>
+
+<div class="tabs" id="tabs"><div class="tab on" id="tabAll">全レース</div><div class="tab" id="tabPrime">自信レース</div></div>
+
+<div class="sec" id="venueSec" style="margin-top:4px"><div class="venues" id="venues"></div></div>
+
+<div id="app"></div>
+
+<div class="disc"><b>必ずお読みください</b><ul id="disc"></ul></div>
+</div>
+<script>
+const DAYS=["20260829", "20260830", "20260905", "20260906", "20260912", "20260913", "20260921", "20260926", "20260927"];
+
+const MC={'◎':'m1','○':'m2','▲':'m3','△':'m4'};
+const WD=['日','月','火','水','木','金','土'];
+let IDX=null, VENUE='ALL', VIEW='all', DAY=null;
+const pct=p=>(p*100).toFixed(1)+'%';
+const iso=d=>d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6);
+const el=id=>document.getElementById(id);
+
+function setupDate(){
+  const dp=el('dp');
+  dp.min=iso(DAYS[0]); dp.max=iso(DAYS[DAYS.length-1]); dp.value=iso(DAY);
+  dp.onchange=()=>{
+    const v=dp.value.replace(/-/g,'');
+    if(DAYS.includes(v)) go(v);
+    else{ dp.value=iso(DAY);
+      el('app').innerHTML='<div class="none">'
+      +'その日の予想はありません。'
+      +'開催日のみ公開しています。</div>'; }
+  };
+  const i=DAYS.indexOf(DAY);
+  el('prev').disabled=(i<=0); el('next').disabled=(i>=DAYS.length-1);
+  el('prev').onclick=()=>go(DAYS[DAYS.indexOf(DAY)-1]);
+  el('next').onclick=()=>go(DAYS[DAYS.indexOf(DAY)+1]);
+  const dt=new Date(+DAY.slice(0,4),+DAY.slice(4,6)-1,+DAY.slice(6));
+  el('dow').textContent=iso(DAY).replace(/-/g,'.')+'  '+WD[dt.getDay()];
+}
+function renderStats(){
+  const prime=IDX.races.filter(r=>r.is_prime_race);
+  const rest=IDX.races.filter(r=>!r.is_prime_race);
+  const pp=prime.length?prime[0].predicted:null;
+  const aa=rest.length?rest[0].predicted:null;
+  const row=(lab,o)=>'<div class="stat"><span>'+lab+'</span><b>'
+    +pct(o.any_of_3_marks_top3_rate)+'</b>'
+    +(o.ci95?'<i>±'+((o.ci95[1]-o.ci95[0])/2*100).toFixed(1)+'</i>':'')
+    +'<span style="opacity:.45">/</span><span>◎</span><b>'
+    +pct(o.honmei_fukusho_rate)+'</b></div>';
+  let h='';
+  if(pp) h+=row('自信レース',pp);
+  if(aa) h+=row('全レース',aa);
+  el('stats').innerHTML=h;
+}
+function raceCard(o){
+  return '<div class="race '+(o.is_prime_race?'prime':'')+'" id="r'+o.race_id+'">'
+   +'<div class="rhead"><span class="rno">'+o.race_num+'R</span>'
+   +'<span class="rname">'+o.racecourse+'　'+(o.race_name||'')+'</span>'
+   +(o.is_prime_race?'<span class="badge">自信</span>':'')+'</div>'
+   +'<div class="cond">'+(o.surface||'')+(o.distance||'')+'m 　'+o.num_horses+'頭'
+   +(o.post_time?'　'+o.post_time+'発走':'')+'</div><table><tbody>'
+   +o.marks.map(m=>'<tr><td class="m '+(MC[m.mark]||'')+'">'+m.mark+'</td>'
+     +'<td class="num">'+m.horse_num+'</td><td class="nm">'+(m.horse_name||'')+'</td>'
+     +'<td class="odds">'+(m.odds!=null?m.odds:'—')+'</td></tr>').join('')
+   +'</tbody></table>'+betsHtml(o)+'</div>';
+}
+function betsHtml(o){
+  if(!o.bets||!o.bets.length) return '';
+  // 点数の少ない順。推奨は掲げない。到達度＝控除率がつくった溝をどれだけ埋めたか。
+  const bs=o.bets.slice().sort((a,b)=>a.points-b.points);
+  const undec=bs.some(b=>b.undecided);
+  return '<div class="bets"><div class="h">'
+   +'この印を買った場合の過去実測</div>'
+   +bs.map(b=>'<div class="bet"><div class="t">'+b.label
+     +'<em>'+b.points+'点 / '+b.cost_yen.toLocaleString()+'円</em></div>'
+     +'<div class="kv">'
+     +'<div><span>的中率</span><b class="hitv">'+pct(b.hit_rate)+'</b></div>'
+     +'<div><span>回収率</span><b class="roiv">'+pct(b.return_rate)
+       +(b.undecided?'<i class="ud">判定不能</i>':'')+'</b></div>'
+     +(b.reach==null?'':'<div><span>到達度</span><b class="'
+       +(b.reach<0?'rchn':'rch')+'">'+pct(b.reach)+'</b></div>')
+     +'</div>'
+     +'<div class="cb">'+b.combinations.map(c=>c.join('-')).join('　')+'</div>'
+     +'</div>').join('')
+   +'<div class="warn">'+(o.bets_note||'')
+   +(undec&&o.bets_undecided_note?'<br>'+o.bets_undecided_note:'')
+   +'</div></div>';
+}
+function renderVenues(){
+  const vs={}; IDX.races.forEach(r=>{vs[r.racecourse]=(vs[r.racecourse]||0)+1;});
+  el('venues').innerHTML=['ALL'].concat(Object.keys(vs)).map(v=>
+    '<button class="v'+(v===VENUE?' on':'')+'" data-v="'+v+'">'
+    +(v==='ALL'?'すべて':v)
+    +'<em>'+(v==='ALL'?IDX.races.length:vs[v])+'</em></button>').join('');
+  el('venues').querySelectorAll('.v').forEach(b=>b.onclick=()=>{
+    VENUE=b.dataset.v; renderVenues(); render();});
+}
+function render(){
+  el('venueSec').style.display=(VIEW==='all')?'':'none';
+  if(VIEW==='prime'){
+    const ps=IDX.races.filter(r=>r.is_prime_race);
+    if(!ps.length){
+      el('app').innerHTML='<div class="none">'
+       +'この日の自信レースは該当なしです。<br>'
+       +'出走馬のキャリアが浅いなど、'
+       +'予測が難しい日と判定されました。<br>'
+       +'基準を下げて無理に選ぶことはしません。</div>';
+      return;
+    }
+    el('app').innerHTML='<div style="margin-top:6px">'+ps.map(r=>
+      '<div class="pick" data-id="'+r.race_id+'">'
+      +'<span class="tm">'+(r.post_time||'')+'</span>'
+      +'<span class="pl">'+r.racecourse+' '+r.race_num+'R</span>'
+      +'<span class="mm">'+r.marks.slice(0,3).map(m=>'<span class="mk '
+        +(MC[m.mark]||'')+'">'+m.mark+'</span>'+m.horse_num).join('　')
+      +'</span></div>').join('')+'</div>'+ps.map(raceCard).join('');
+    el('app').querySelectorAll('.pick').forEach(b=>b.onclick=()=>{
+      const t=document.getElementById('r'+b.dataset.id);
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});});
+    return;
+  }
+  const rs=IDX.races.filter(r=>VENUE==='ALL'||r.racecourse===VENUE);
+  el('app').innerHTML=rs.map(raceCard).join('')
+    ||'<div class="none">表示できるレースがありません。</div>';
+}
+function setTab(v){
+  VIEW=v;
+  el('tabAll').classList.toggle('on',v==='all');
+  el('tabPrime').classList.toggle('on',v==='prime');
+  render();
+}
+async function go(d){
+  DAY=d; setupDate();
+  el('app').innerHTML='<div class="none">読み込み中</div>';
+  IDX=await (await fetch('predictions/'+d+'/index.json')).json();
+  el('disc').innerHTML=(IDX.disclaimer||[]).map(x=>'<li>'+x+'</li>').join('');
+  el('tabPrime').innerHTML='自信レース<em>'+IDX.n_prime_races+'</em>';
+  VENUE='ALL'; renderVenues(); renderStats(); setTab('all');
+}
+el('tabAll').onclick=()=>setTab('all');
+el('tabPrime').onclick=()=>setTab('prime');
+fetch('assets/hero.jpg',{method:'HEAD'})
+  .then(r=>{if(r.ok)el('bg').classList.add('img');}).catch(()=>{});
+if(DAYS.length) go(DAYS[DAYS.length-1]);
+else{
+  el('app').innerHTML='<div class="none">'
+    +'公開できる開催日がまだありません。</div>';
+  ['dateSec','statsSec','tabs','venueSec'].forEach(i=>{
+    const e=el(i); if(e) e.style.display='none';});
+}
+
+</script></body></html>
